@@ -11,28 +11,50 @@
   </head>
   <body>
     <div class="wrapper">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>
-              Имя
-              <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
-            </th>
-            <th>
-              Фамилия
-              <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
-            </th>
-            <th>
-              Описание
-              <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
-            </th>
-            <th>
-              Цвет глаз
-              <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
-            </th>
-          </tr>
-        </thead>
-      </table>
+      <div class="table__container">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>
+                Имя
+                <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
+              </td>
+              <td>
+                Фамилия
+                <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
+              </td>
+              <td>
+                Описание
+                <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
+              </td>
+              <td>
+                Цвет глаз
+                <span class="sorter-arrow">a<img class="arrow-icon" src="./svg/left-arrow.svg" alt="" /> z</span>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <div class="hide__columns">
+          <span>Скрыть колонку</span>
+          <div class="hide__input">
+            <span>
+              <label> <input type="checkbox" /> Имя </label>
+            </span>
+            <span>
+              <label> <input type="checkbox" /> Фамилия </label>
+            </span>
+            <span>
+              <label> <input type="checkbox" /> Описание </label>
+            </span>
+            <span>
+              <label> <input type="checkbox" /> Цвет глаз </label>
+            </span>
+          </div>
+        </div>
+        <div class="pagination__container">
+          <ul class="pagination"></ul>
+        </div>
+      </div>
       <div class="modal__container">
         <div class="modal">
           <form class="modal__form">
@@ -57,6 +79,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main copy.js"></script>
   </body>
 </html>

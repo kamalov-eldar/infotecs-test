@@ -31,42 +31,74 @@ textarea {
   padding: 10px;
 }
 
-.rows {
-  display: flex;
+.table__container {
+  width: 50%;
 }
 .table {
-  width: 50%;
-  //border-radius: 20px;
   border-collapse: collapse; //убрать промежуток между рамками ячеек
   background: #ffffff;
-  border-radius: 20px;
+  min-width: 100%;
+  min-height: 100%;
 }
-// таблице заголовок
+
+.hide__columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  font-weight: bold;
+  color: #039;
+  span {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+  label {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+
+.hide__input {
+  display: flex;
+  margin: 10px;
+  color: #669;
+}
+// заголовок таблицы
 caption {
   caption-side: bottom;
   text-align: center;
   font-size: 14px;
 }
+
+
+
 thead {
   &:hover {
     background: #ffffff;
   }
-  tr:first-child {
-    &:hover {
-      background: #ffffff;
-    }
+  td {
+    font-weight: bold;
+    color: #039;
+    // white-space: nowrap;
+    padding: 10px;
   }
 }
-th {
-  font-weight: bold;
-  color: #039;
-  white-space: nowrap;
-  padding: 10px;
-}
+
+
+
 td {
   color: #669;
   border: 1px solid #ddd;
   text-align: center;
+  padding: 12px 0;
+  &:nth-child(3) {
+    padding: 0;
+  }
 }
 
 tr:nth-child(2n) {
@@ -74,40 +106,41 @@ tr:nth-child(2n) {
   background: #e8edff;
 }
 //по классу и по атрибуту, псевдоклассы 0,0,1,0
-// по тегу 0,0,1,0
-// 0,0,1,0
 .editing td {
   background: #ddd;
 }
 
-tr {
-  &:last-child {
-    td {
-      border-bottom: none;
-    }
-  }
-  &:hover {
-    background: #ddd;
-    cursor: pointer;
-  }
+tr:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+thead tr:hover {
+  background: #ffffff;
 }
 
-.table tbody tr:last-child td:first-child {
+/* .table tr:first-child th:first-child {
+  border-radius: 20px 0 0 0;
+  border: none;
+}
+.table tr:first-child th:last-child {
+  border-radius: 0 20px 0 0;
+  border: none;
+
+} */
+
+/* .table tbody tr:last-child td {
   border-radius: 0 0 0 20px;
   border-bottom: none;
   border-left: none;
 }
-.table tbody tr:last-child td:last-child {
+.table tbody tr:last-child td {
   border-radius: 0 0 20px 0;
   border-right: none;
   border-bottom: none;
-}
-.table thead tr th:first-child {
-  border-radius: 20px 0 0 0;
-  border: none;
-}
-.table thead tr th:last-child {
-  border-radius: 0 20px 0 0;
+} */
+
+.hide {
+  display: none;
 }
 
 .about {
@@ -152,6 +185,39 @@ tr {
     opacity: 1;
   }
 }
+
+.pagination__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  li {
+    font-family: inherit;
+    display: inline;
+    padding: 10px;
+    border: 1px solid #039;
+    font-weight: bold;
+    color: #039;
+    cursor: pointer;
+    margin-left: -1px;
+  }
+}
+
+.pagination {
+  .active {
+    border: 2px solid #36944a;
+    color: #36944a;
+    z-index: 2;
+  }
+}
+
 .modal__container {
   width: 50%;
 }
