@@ -75,8 +75,6 @@ caption {
   font-size: 14px;
 }
 
-
-
 thead {
   &:hover {
     background: #ffffff;
@@ -89,18 +87,16 @@ thead {
   }
 }
 
-
-
 td {
   color: #669;
   border: 1px solid #ddd;
   text-align: center;
   padding: 12px 0;
+
   &:nth-child(3) {
     padding: 0;
   }
 }
-
 tr:nth-child(2n) {
   // по тегу и псевдоклассы 0,0,1,1
   background: #e8edff;
@@ -113,31 +109,11 @@ tr:nth-child(2n) {
 tr:hover {
   background: #ddd;
   cursor: pointer;
+  opacity: 0.8;
 }
 thead tr:hover {
   background: #ffffff;
 }
-
-/* .table tr:first-child th:first-child {
-  border-radius: 20px 0 0 0;
-  border: none;
-}
-.table tr:first-child th:last-child {
-  border-radius: 0 20px 0 0;
-  border: none;
-
-} */
-
-/* .table tbody tr:last-child td {
-  border-radius: 0 0 0 20px;
-  border-bottom: none;
-  border-left: none;
-}
-.table tbody tr:last-child td {
-  border-radius: 0 0 20px 0;
-  border-right: none;
-  border-bottom: none;
-} */
 
 .hide {
   display: none;
@@ -266,6 +242,21 @@ thead tr:hover {
   box-sizing: border-box;
   border-radius: 10px;
   padding: 8px 0 8px 19px;
+  margin-bottom: 16px;
+}
+
+.modal__textarea {
+  font-size: 16px;
+  line-height: 16px;
+  width: 100%;
+  min-height: 40px;
+  resize: none;
+  overflow: auto;
+  background: #ffffff;
+  border: 1px solid #dad9d9;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px;
   margin-bottom: 16px;
 }
 
