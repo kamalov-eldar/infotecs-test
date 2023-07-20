@@ -176,7 +176,7 @@ function editing() {
                             paste(inputTextValue, indexInput); // функция вставки получает параметры input
                             indexEnter++;
                             if (indexEnter <= inputArr.length - 1) {
-                                event.target.value = '';
+                                // event.target.value = '';
                                 inputArr[indexEnter].focus(); //перемещать фокус на след инпут по enter
                             } else {
                                 event.target.value = '';
@@ -189,6 +189,7 @@ function editing() {
 
             // 3. изменить текст строки
             function paste(inputTextValue, indexInput) {
+
                 const tdArr = tr.querySelectorAll('td');
                 for (let i = 0; i < tdArr.length; i++) {
                     if (indexInput === i) {
